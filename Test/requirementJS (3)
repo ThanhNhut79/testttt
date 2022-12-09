@@ -1,0 +1,34 @@
+// 1
+// Input: Number array [1- 100]
+// Output: find pairs of numbers whose sum is prime and arrange them from small to large.
+// [
+//   [1, 2],
+//   [1, 4],
+// ];
+
+
+// 2
+// Input: No
+// Require: Create an array of 200 strings (a-f[length==8]). Finds elements with the letter a but not the letter c and ends with f.
+
+
+// 3
+// Input: https://api.covidtracking.com/v1/states/daily.json
+// Output: Total of deathConfirmed, totalTestsPeopleViral, negativeIncrease worldwide
+// Format:
+/*
+    {  "deathConfirmed": x,
+      "totalTestsPeopleViral": y,
+      "negativeIncrease": z
+    }
+ */
+ 
+ 
+ // 4
+// Require: array of 10 next date. Is monday, is even date of month (exclude 2,4,6,8,10) and calculate period of time from now.
+// Format
+//
+// [{
+//   date: 08-04-2021,
+//   countdown: 12 days 1 minute, 30 second.
+// }]

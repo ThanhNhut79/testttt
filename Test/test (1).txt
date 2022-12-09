@@ -1,0 +1,115 @@
+Bài 1. Nối chuỗi
+Sửa hàm joinBrandNames(arr) sao cho xuất ra một chuỗi string là danh sách các name của mỗi phần tử trong array nối tiếp nhau ngăn cách bởi dấu phẩy và phải có 1 dấu cách sau dấu phẩy
+
+Inputs:
+arr: một array các objects, mỗi object có 2 properties id và name, vd: [{id: 1, name: "Toyota"}, {id: 2, name: "Suzuki"}, {id: 3, name: "Ford"}]
+Kết quả mong muốn: Một chuỗi string gồm tất cả các name của các object trong arr chuyền vào, ngăn cách bởi dấu phẩy và một khoảng trắng sau dấu phẩy ", " vd: "Toyota, Suzuki, Ford"
+
+
+Bài 2. Kiểm tra 1 chuỗi string là 1 chuỗi đối xứng
+Sửa hàm checkStringPalindrome(numbersArray) sao cho kết quả trả về là true nếu input là 1 chuỗi đối xứng, ngược lại trả về false.
+
+Input: một chuỗi string, vd "ABCCBA", "DEFED", "12345", "UIO090OIU"
+
+Kết quả mong muốn:
+
+true: nếu input là 1 chuỗi đối xứng, vd input là một trong "ABCCBA", "DEFED", "UIO090OIU", "100001"
+false: nếu chuỗi không đối xứng vd: "12345", "TUut", "900", "ab"
+
+
+Bài 3. Kiểm tra mảng có chứa số chẵn nào không
+Sửa hàm checkArrayHasAnEvenNumber(numbersArray) sao cho kết quả trả về là true nếu numbersArray có ít nhất 1 số chẵn, ngược lại trả về false.
+
+Input: numbersArray là một mảng có một hoặc nhiều số vd: [-1], [1, 4, 5, 2, 9]
+
+Kết quả mong muốn:
+
+true: nếu numbersArray có chứa ít nhất 1 số chẵn
+false: nếu numbersArray không có số chẵn nào
+Thành công ✓
+Bài 4. Tìm những phần tử chung của 2 mảng số nguyên
+Sửa hàm findIntersectNumbers để kết quả trả về là 1 array gồm tất cả các số có trong cả 2 danh sách arr1 và arr2
+
+Inputs:
+arr1: một array các số nguyên, vd [1,3,5,7]
+arr2: một array các số nguyên, vd [1,5,7,9,9]
+Kết quả mong muốn: Một arr chứa các số nguyên có mặt ở cả 2 arrays arr1 và arr2, mỗi số chỉ xuất hiện một lần trong mảng kết quả này.
+vd1: Kết quả của findIntersectNumbers([1, 3, 4, 8], [2, 4, 6, 8]) là [4, 8].
+vd2: kết quả của findIntersectNumbers([2, 3, 4, 5], [5, 5]) là [5].
+
+
+Bài 5. Xuất ra các chữ số của một số
+Sửa hàm listSingleNumbers để xuất ra tất cả các chữ số của một số,
+
+Input:Một số nguyên, vd 1092, 23, 912
+
+Kết quả mong muốn: Một array các chữ số của số input, vd input là 15 thì output là 1 list có 2 phần tử [1,5], input là 100 thì output là [1, 0, 0], input là 923 thì output là [9,2,3]
+
+
+Bài 6. Lấy ra ngày Thứ Năm đầu tiên của một tháng.
+Sửa hàm firstThursdayOfMonth để lấy ra ngày tháng năm của ngày Thứ Năm đầu tiên trong một tháng
+
+Inputs:
+month: tháng, có thể là 1 số bất kỳ từ 1 đến 12
+year: năm, vd: 2009, 1992, 2015
+Kết quả mong muốn: ngày (kiểu Date) của ngày Thứ Năm đầu tiên trong tháng.
+
+VD1: month: 11, year: 2021, kết quả là ngày 4/11/2021.
+VD2: Tháng 6 năm 2022, kết quả là ngày 2/6/2022.
+
+
+Bài 7. Filter array theo điều kiện
+Sửa hàm queryCars sao cho từ danh sách xe hơi (cars) chuyền vào kết quả trả về là một array chứa những xe hơi thỏa điều kiện và có giới hạn theo pageIndex.
+
+Inputs:
+cars: một array các object, mỗi object có nhiều thuộc tính, id, brandId, name, price, vd:
+[
+{id: 1, brandId, 2, name: 'Innova', price: 5200},
+{id: 2, brandId, 2, name: 'Civic', price: 7000},
+{id: 3, brandId, 3, name: 'Fortuner', price: 9000},
+{id: 4, brandId, 4, name: 'City', price: 6500}
+]
+brandId: một số nguyên, có thể null, dùng để lọc từ input cars có brandId bằng với input này. Nếu input này khác null, kết quả trả về chỉ bao gồm những xe hơi (car) có brandId bằng với giá trị này
+name: một chuỗi string, có thể null, vd "Toyo", "tuner". Dùng để lọc từ input cars những car có name chứa parameter này (không phân biệt hoa thường), vd giá trị là "in" thì kết quả trả về có car tên là Innova, giá trị này là "ci" thì kết quả có hai cars là Civic và City.
+minPrice: một số nguyên, nếu parameter này khác null, kết quả trả về chỉ bao gồm những car có giá (price) lớn hơn hoặc bằng parameter này.
+maxPrice: nếu paramater này khác null, kết quả trả về chỉ bao gồm những car có giá (price) nhỏ hơn hoặc bằng parameter này.
+pageIndex: Phân trang kết quả sau khi lọc theo các điều kiện trên, mỗi trang gồm 5 cars. Trong đó, pageIndex là số trang
+Lưu ý:
+- pageIndex bắt đầu từ 0.
+- Nếu pageIndex NULL, trả về tất cả kết quả.
+vd1: pageIndex = 0 nghĩa là trả về 5 phần tử đầu tiên.
+vd2: pageIndex = 2 nghĩa là nghĩa là trả về 5 phần tử sau 10 phần tử đầu tiên.
+vd3: pageIndex NULL trả về tất cả các kết quả.
+Nếu có nhiều hơn 1 điều kiện, phải lọc theo đủ các điều kiện
+Kết quả mong muốn: array của các objects car giống với các object trong array cars input nhưng thỏa các điều kiện lọc và phân trang trên.
+
+
+Bài test 8. Group các phần tử trong mảng
+Sửa hàm groupCarsByBrandIds để nhóm các xe (car) theo thương hiệu (brand) và trả về array thương hiệu (brand) trong đó mỗi thương hiệu có một array cars theo thương hiệu đó.
+
+Inputs:cars: một array các object, mỗi object có nhiều thuộc tính, id, brandId, name, price, vd:
+[
+{id: 1, brandId: 2, name: 'Innova', price: 5200},
+{id: 2, brandId: 1, name: 'Civic', price: 7000},
+{id: 3, brandId: 2, name: 'Fortuner', price: 9000},
+{id: 4, brandId: 1, name: 'City', price: 6500}
+]
+
+Kết quả mong muốn: Một array các object, mỗi object có 2 thuộc tính brandId và cars, trong đó giá trị của cars là một array các object car từ input cars chuyền vào
+VD kết quả từ input trên:
+[
+{
+brandId: 2,
+cars: [
+{id: 1, name: 'Innova', price: 5200, brandId: 2},
+{id: 3, name: 'Fortuner', price: 9000, brandId: 2}
+]
+},
+{
+brandId: 1,
+cars: [
+{id: 2, name: 'Civic', price: 7000, brandId: 1},
+{id: 4, name: 'City', price: 6500, brandId: 1}
+]
+}
+]
